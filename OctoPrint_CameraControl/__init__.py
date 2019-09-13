@@ -39,12 +39,12 @@ class OctoPrint_CameraControlPlugin(octoprint.plugin.StartupPlugin,
                 url_regex = '(?:http.*://)?(?P<host>[^:/ ]+).?(?P<port>[0-9]*).*'
                 m = re.search(url_regex, camera['URL'])
                 camera_url = str(m.group('host'))+":"+str(m.group('port'))
-                profiles.append({'name':camera['name'],'url':camera_url,'user':"admin",'password':"Hooch2496",'tiltspeed_command':"TiltSingleMoveDegree",'panspeed_command':"PanSingleMoveDegree",'speed':20,'move_url':"/pantiltcontrol.cgi",'move_command':"PanTiltSingleMove",'up':"1",'down':"7",'left':"3",'right':"5",'ir_url':"/nightmodecontrol.cgi",'ir_command':"IRLed",'ir_on':"1",'ir_off':"0"})
+                profiles.append({'name':camera['name'],'url':camera_url,'user':"admin",'password':"Password",'tiltspeed_command':"TiltSingleMoveDegree",'panspeed_command':"PanSingleMoveDegree",'speed':20,'move_url':"/pantiltcontrol.cgi",'move_command':"PanTiltSingleMove",'up':"1",'down':"7",'left':"3",'right':"5",'ir_url':"/nightmodecontrol.cgi",'ir_command':"IRLed",'ir_on':"1",'ir_off':"0"})
         else:
             url_regex = '(?:http.*://)?(?P<host>[^:/ ]+).?(?P<port>[0-9]*).*'
             m = re.search(url_regex,octoprint.settings.settings().get(["webcam","stream"]))
             camera_url = str(m.group('host'))+":"+str(m.group('port'))
-            profiles.append({'name':"Default",'url':camera_url,'user':"admin",'password':"Hooch2496",'tiltspeed_command':"TiltSingleMoveDegree",'panspeed_command':"PanSingleMoveDegree",'speed':20,'move_url':"/pantiltcontrol.cgi",'move_command':"PanTiltSingleMove",'up':"1",'down':"7",'left':"3",'right':"5",'ir_url':"/nightmodecontrol.cgi",'ir_command':"IRLed",'ir_on':"1",'ir_off':"0"})
+            profiles.append({'name':"Default",'url':camera_url,'user':"admin",'password':"Password",'tiltspeed_command':"TiltSingleMoveDegree",'panspeed_command':"PanSingleMoveDegree",'speed':20,'move_url':"/pantiltcontrol.cgi",'move_command':"PanTiltSingleMove",'up':"1",'down':"7",'left':"3",'right':"5",'ir_url':"/nightmodecontrol.cgi",'ir_command':"IRLed",'ir_on':"1",'ir_off':"0"})
         return dict(OctoPrint_CameraControl_profiles=profiles)
 
     def get_template_configs(self):
