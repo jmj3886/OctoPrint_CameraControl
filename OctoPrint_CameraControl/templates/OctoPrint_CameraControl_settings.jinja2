@@ -1,0 +1,34 @@
+<!-- ko allowBindings: true --> <form id="settings_plugin_OctoPrint_CameraControl_form" class="form-horizontal">
+    <h3>{{ _('Webcam Control Settings') }}</h3>
+    <select id="OctoPrint_CameraControlSelector" data-bind="options: camnames, selectedOption: camnames[0]">...</select>
+    <hr>
+    <div class="row-fluid">
+            <h4>URL</h4>
+            <input id="camUrlInput" type="text"></input>
+            <h4>User</h4>
+            <input id="userInput" type="text"></input>
+            <h4>Password</h4>
+            <input id="passwordInput" type="password"></input>
+	    <h4>Move Command</h4>
+	    <input id="mvCommandInput" type="text"></input>
+	    <h4>IRLed Command</h4>
+	    <input id="irCommandInput" type="text"></input>
+            <h4>Pan Speed Command</h4>
+            <input id="panSpeedCommandInput" type="text"></input>
+            <h4>Tilt Speed Command</h4>
+            <input id="tiltSpeedCommandInput" type="text"></input>
+	    <h4>Up</h4>
+            <input id="upInput" type="text"></input>
+            <h4>Down</h4>
+            <input id="downInput" type="text"></input>
+            <h4>Left</h4>
+            <input id="leftInput" type="text"></input>
+            <h4>Right</h4>
+            <input id="rightInput" type="text"></input>
+            <h4>IRLed On</h4>
+            <input id="irOnInput" type="text"></input>
+            <h4>IRLed Off</h4>
+            <input id="irOffInput" type="text"></input>
+    </div>
+</form>
+<!-- /ko -->
